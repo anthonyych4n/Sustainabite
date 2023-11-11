@@ -7,10 +7,16 @@ function MainPage({ setQuery, query }) {
     <>
       <section>
         <div className="mainpage1">
-          <h1 className="mainpageh1"></h1>
-          <p>A web app to find more sustainable choices to your food.</p>
+          <div className="titlecontainer">
+            <img src="src\assets\cart.png" />
+            <img src="src\assets\name.png" />
+            <p>A web app to find more sustainable choices to your food.</p>
+          </div>
+        </div>
+        <div className="searchcontainer">
           <Search setQuery={setQuery} query={query} />
         </div>
+
         <div className="mainpage2"></div>
       </section>
       <section className="footer">
