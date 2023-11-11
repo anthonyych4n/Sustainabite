@@ -52,12 +52,22 @@ input:focus {
   padding-bottom: 1rem;
 }
 
-.mainpage {
+.mainpage2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
+  background-color: var(--midlight-main-color);
+  gap: 1rem;
+}
+
+.mainpage1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
   background-color: var(--midlight-main-color);
   gap: 1rem;
 }
@@ -65,7 +75,6 @@ input:focus {
 .mainpageh1 {
   font-size: 5rem;
   color: var(--text-primary);
-  
 }
 
 /* Footer */
