@@ -71,6 +71,7 @@ input:focus {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: grey;
 }
 
 .mainpage3 {
@@ -79,7 +80,6 @@ input:focus {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: grey;
 }
 
 .mainpage2 {
