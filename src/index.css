@@ -64,7 +64,8 @@ input:focus {
   color: var(--middle-main-color);
   font-weight: bold;
 }
-.mainpage3 {
+
+.mainpage4 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,6 +73,13 @@ input:focus {
   height: 100vh;
 }
 
+.mainpage3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 .mainpage2 {
   display: flex;

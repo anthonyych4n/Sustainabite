@@ -26,7 +26,16 @@ function MainPage({ setQuery, query }) {
           <p>
           </p>
 
-          </div>
+        </div>
+        
+        <div className="mainpage4"></div>
+          <div className= "detailscontainer">
+          <h2></h2>
+          <p>
+          </p>
+
+        </div>
+
       </section>
       <section className="footer">
         <Footer />
