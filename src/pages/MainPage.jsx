@@ -6,8 +6,9 @@ function MainPage({ setQuery, query }) {
   return (
     <>
       <section>
-        <div className="main-page">
-          <h1>SustainaBites</h1>
+        <div className="mainpage">
+          <h1 className="mainpageh1">SustainaBites</h1>
+          <p>A web app to find more sustainable choices to your food.</p>
           <Search setQuery={setQuery} query={query} />
         </div>
       </section>
