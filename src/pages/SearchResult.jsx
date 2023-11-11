@@ -3,9 +3,11 @@ import FoodChoice from "../components/FoodChoice";
 import { useEffect } from "react";
 
 function SearchResult({ results, setResults }) {
+  console.log(results);
   useEffect(() => {
-    if (results.length === 0) {
+    if (results.length === 0 || !results) {
       const data = JSON.parse(localStorage.getItem("results"));
+      console.log(data);
       setResults(data);
     }
   }, []);
