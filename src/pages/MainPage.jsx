@@ -22,14 +22,14 @@ function MainPage({ setQuery, query }) {
 
         <div className="mainpage3"></div>
           <div className= "detailscontainer">
-          <h2></h2>
+          <h2>Details</h2>
           <p>
           </p>
 
         </div>
         
         <div className="mainpage4"></div>
-          <div className= "detailscontainer">
+          <div className= "featurescontainer">
           <h2></h2>
           <p>
           </p>
