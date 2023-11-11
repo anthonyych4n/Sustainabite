@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import MainPage from "./pages/MainPage";
 
 function App() {
@@ -6,7 +8,14 @@ function App() {
 
   return (
     <>
-      <MainPage setQuery={setQuery} query={setQuery} />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<MainPage setQuery={setQuery} query={setQuery} />}
+          />
+        </Routes>
+      </Router>
     </>
   );
 }
