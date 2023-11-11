@@ -52,8 +52,16 @@ def get_gpt_suggestion():
         dish_instructions = data.get('dish_instructions')
         dish_ingredients = data.get('dish_ingredients')
 
+        # dish_name2 = "Pasta Carbonara"
+        # dish_instructions2 = "Boil pasta. Cook bacon. Mix eggs, cheese, and pepper. Combine with cooked pasta and bacon."
+        # dish_ingredients2 = "pasta, bacon, eggs, cheese, pepper"
+
+        # dish_name3 = 'Vegetarian Stir-Fry'
+        # dish_name3 = 'Chop vegetables. Stir-fry in a pan with soy sauce and ginger. Serve over rice.'
+        # dish_ingredients3 = 'vegetables, soy sauce, ginger, rice'
+
         # Call ChatGPT API to get sustainable alternatives
-        suggestions = call_chatgpt(dish_ingredients)
+        suggestions = call_chatgpt(dish_ingredients, dish_name)
 
         # Return a response with original data and sustainable alternatives
         return jsonify({
@@ -66,9 +74,9 @@ def get_gpt_suggestion():
         return jsonify({'error': str(e)})
 
 
-def call_chatgpt(ingredients):
+def call_chatgpt(ingredients, dish_name):
     try:
-        request = f"Given the ingredients '{ingredients}', suggest more eco-friendly and sustainable alternatives."
+        request = f"Given the ingredients '{ingredients} for dish '{dish_name}', suggest more eco-friendly and sustainable alternatives. Please reply only in JSON format, where we have an outer field of 'ingredients' containing JSON mappings of old ingredients to the new ingredient replacement. Please provide a field for intructions to cook the new dish as 'instructions' with the step by step listed as an array of strings in JSON format."
 
         headers = {
             "Content-Type": "application/json",
@@ -88,7 +96,7 @@ def call_chatgpt(ingredients):
         gpt_response = response.json()
         text_string = gpt_response['choices'][0]['text']
         text_string = text_string.strip()
-
+        print(text_string)
         return text_string
     except Exception as e:
         print(f"Error calling ChatGPT: {str(e)}")
