@@ -1,11 +1,12 @@
 import { useState } from "react";
-
-import "./App.css";
+import MainPage from "./pages/MainPage";
 
 function App() {
+  const [query, setQuery] = useState("");
+
   return (
     <>
-      <h1>Hello</h1>
+      <MainPage setQuery={setQuery} query={setQuery} />
     </>
   );
 }
