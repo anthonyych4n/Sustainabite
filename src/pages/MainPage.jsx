@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import Search from "../components/Search";
+import Footer from "../components/Footer";
 
 function MainPage({ setQuery, query }) {
   return (
@@ -9,6 +10,9 @@ function MainPage({ setQuery, query }) {
           <h1>SustainaBites</h1>
           <Search setQuery={setQuery} query={query} />
         </div>
+      </section>
+      <section className="footer">
+        <Footer />
       </section>
     </>
   );
