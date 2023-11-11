@@ -7,14 +7,13 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 NinjaApiKey = 'zJdigLtik+jLFCQc8c29sQ==dp0JVzsSmD2uoo6R'
 
-@app.route('/ingredients/<dish_name>', methods=['GET'])
+@app.route('/dish/<dish_name>', methods=['GET'])
 def get_dish_info(dish_name):
-    # dish_info = request_dish_info(dish_name)
     dish_info = request_dish_info(dish_name)
     if dish_info:
-        return dish_info.text
+        return dish_info.text  # Return the content of the response
     else:
-        return jsonify({'error': 'Dish not found'}), 404 # 404 Not Found Error
+        return jsonify({'error': 'Dish not found'}), 404
 
 def request_dish_info(dish_name):
     print("Request to retrieve recipe...")
