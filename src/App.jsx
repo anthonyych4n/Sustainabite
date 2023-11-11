@@ -6,6 +6,7 @@ import SearchResult from "./pages/SearchResult";
 
 function App() {
   const [query, setQuery] = useState("");
+  const [results, setResults] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("lastQuery", query);
@@ -19,7 +20,10 @@ function App() {
             path="/"
             element={<MainPage setQuery={setQuery} query={query} />}
           />
-          <Route path="/search-results" element={<SearchResult />} />
+          <Route
+            path="/search-results"
+            element={<SearchResult results={results} setResults={setResults} />}
+          />
         </Routes>
       </Router>
     </>

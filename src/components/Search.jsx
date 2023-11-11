@@ -1,14 +1,25 @@
 /* eslint-disable react/prop-types */
 
-import { redirect } from "react-router-dom";
-
 function Search({ query, setQuery }) {
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
     console.log(query);
+    await makeApiRequest(query);
 
-    redirect("/search-results");
+    // Redirect to search results page
+    window.location.href = "/search-results";
   };
+
+  async function makeApiRequest(query) {
+    // Replace with your Flask endpoint URL and dish_name
+    var apiUrl = "http://127.0.0.1:5000/dish/" + query;
+
+    // Make API request
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    localStorage.setItem("results", JSON.stringify(data));
+    console.log(data);
+  }
 
   return (
     <>

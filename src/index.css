@@ -121,6 +121,12 @@ input:focus {
   gap: 1rem;
 }
 
+/* Search Results*/
+
+.search-results {
+  background-color: var(--midlight-main-color);
+}
+
 /* Footer */
 .footer {
   background-color: #000000;
@@ -137,4 +143,57 @@ input:focus {
 
 .footer-h2 {
   color: var(--text-primary);
+}
+
+/* Basic Button Styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  color: #3498db;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.button:hover {
+  background-color: #3498db;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Additional Styles for Different States */
+.button:active {
+  background-color: #1f618d;
+  border-color: #1f618d;
+}
+
+/* Disable the button */
+.button:disabled {
+  background-color: #bdc3c7;
+  border-color: #bdc3c7;
+  color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* Util */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
