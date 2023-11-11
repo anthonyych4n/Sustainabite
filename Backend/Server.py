@@ -15,15 +15,8 @@ with open('keys.txt') as f:
         value = '='.join(parts[1:])
         keys[key] = value
 
-# print(keys)
-
 ninja_api_key = keys.get('ninja_api_key')
 openai_api_key = keys.get('openai_api_key')
-
-# TODO:
-# 1.) Fix the way that ingredients are passed back to frontend
-# 2.) Fix ChatGPT suggestion format
-# 3.) Image generator from ChatGPT
 
 @app.route('/dish/<dish_name>', methods=['GET'])
 def get_dish_info(dish_name):
@@ -52,24 +45,15 @@ def get_gpt_suggestion():
         dish_instructions = data.get('dish_instructions')
         dish_ingredients = data.get('dish_ingredients')
 
-        # dish_name2 = "Pasta Carbonara"
-        # dish_instructions2 = "Boil pasta. Cook bacon. Mix eggs, cheese, and pepper. Combine with cooked pasta and bacon."
-        # dish_ingredients2 = "pasta, bacon, eggs, cheese, pepper"
-
-        # dish_name3 = 'Vegetarian Stir-Fry'
-        # dish_name3 = 'Chop vegetables. Stir-fry in a pan with soy sauce and ginger. Serve over rice.'
-        # dish_ingredients3 = 'vegetables, soy sauce, ginger, rice'
-
         # Call ChatGPT API to get sustainable alternatives
         suggestions = call_chatgpt(dish_ingredients, dish_name)
 
         # Return a response with original data and sustainable alternatives
-        return jsonify({
-            'dish_name': dish_name,
-            'dish_instructions': dish_instructions,
-            'dish_ingredients': dish_ingredients,
-            'sustainable_alternatives': suggestions
-        })
+        # return jsonify({
+        #     'sustainable_alternatives': suggestions
+        # })
+        return jsonify(suggestions)
+    
     except Exception as e:
         return jsonify({'error': str(e)})
 
