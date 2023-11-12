@@ -55,7 +55,7 @@ def get_gpt_suggestion():
 
 def call_chatgpt(ingredients, dish_name):
     try:
-        request = f"Given the ingredients '{ingredients} for dish '{dish_name}', suggest more eco-friendly and sustainable alternatives. Please reply only in JSON format, where we have an outer field of 'ingredients' containing JSON mappings of old ingredients to the new ingredient replacement. Please provide a field for intructions to cook the new dish as 'instructions' with the step by step listed as an array of strings in JSON format. Can you also add a 'Reason' field in the JSON explaining why it is sustainable. Please make the reason thorough with an explanation for the recommendation for each ingredient. Please append the name of the dish to the end of this string with field name 'dish_name'. Please ensure this can be directly converted into JSON format."
+        request = f"Given the ingredients '{ingredients} for dish '{dish_name}', suggest more eco-friendly and sustainable alternatives. Please reply only in JSON format, where we have an outer field of 'ingredients' containing JSON mappings of old ingredients to the new ingredient replacement. Please provide a field for intructions to cook the new dish as 'instructions' with the step by step listed as an array of strings in JSON format. Can you also add a 'Reason' field in the JSON explaining why it is sustainable. Please make the reason short with an explanation for the recommendation for each ingredient. Please append the name of the dish to the end of this string with field name 'dish_name'. Please ensure this can be directly converted into JSON format."
 
         headers = {
             "Content-Type": "application/json",

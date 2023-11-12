@@ -123,6 +123,7 @@ input:focus {
   height: 550px;
   left: 35%;
   top: 20%;
+  padding-top: 3rem;
 }
 
 .listcontainer {
@@ -214,13 +215,13 @@ input:focus {
 }
 
 .ingredients-section {
-  background-color: #A6CF98;
+  background-color: #a6cf98;
   color: black;
   padding-bottom: 5rem;
 }
 
 .recipe-dish {
-  color: #A6CF98;
+  color: #a6cf98;
   text-align: center;
   font-size: 6rem;
   padding-bottom: 5rem;
@@ -253,15 +254,15 @@ input:focus {
   text-align: center;
 }
 
-.reason-section{
-  background-color: #A6CF98;
+.reason-section {
+  background-color: #a6cf98;
   text-align: center;
   justify-content: center;
   font-size: 2rem;
   padding: 2rem;
 }
 
-.reason-header{
+.reason-header {
   text-align: center;
   font-size: 4rem;
   padding: 2rem;
