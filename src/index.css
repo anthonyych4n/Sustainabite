@@ -70,16 +70,17 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: grey;
+  height: 80vh;
+  background-color: #d9d9d9;
 }
 
 .mainpage3 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
+  background-color: var(--text-primary);
 }
 
 .mainpage2 {
@@ -110,6 +111,48 @@ input:focus {
   align-items: center;
   gap: 1rem;
   padding-bottom: 4rem;
+}
+
+
+.Icon {
+  position: relative;
+  width: 900px;
+  height: 550px;
+  left: 35%;
+  top: 20%;
+}
+.detailstitle{
+  position: absolute;
+  justify-content: center;
+  top: 1900px;
+  left: 31%;
+  font-size: 100px;
+  color: var(--midlight-main-color);
+}
+
+.details{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  top: 1750px;
+  left: 48%
+}
+
+.detailscontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailscontainer > p{
+  color: var(--midlight-main-color);
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  top: 2100px;
+  left: 34%;
+  width: 1000px;
 }
 
 .mainpageh1 {
@@ -145,6 +188,61 @@ input:focus {
 
 .search-results {
   background-color: var(--midlight-main-color);
+}
+
+.featurescontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* changed from absolute to relative */
+  border-radius: 50px; 
+  height: 100%;
+  width: 100%;
+  padding-top: 10rem;
+}
+
+.features-img{
+  max-height: 6rem;
+  max-width: 6rem;
+  margin-right: 2.5rem;
+}
+.features{
+  font-size: 5rem;
+  padding: 2rem;
+}
+
+.feature-boxes{
+  padding-top: 10rem;
+}
+
+.feature-subtitle > p{
+  font-size: 1.6rem;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center; /* added to center the boxes */
+  order: 0;
+  background-color: #ffffff;
+  padding: 3rem;
+  width: 50%;
+  height: 100%;
+  margin: 2rem;
+  background-color: white;
+  border-radius: 50px;
+  /* add other styles as needed */
+}
+
+.box-content {
+  color: black;
+  font-size: 1.6rem;
+}
+
+.box-title {
+  font-size: 2rem;
 }
 
 /* Footer */
@@ -205,6 +303,7 @@ input:focus {
 .flex-row {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .flex-column {
