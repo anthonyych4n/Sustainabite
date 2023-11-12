@@ -67,26 +67,12 @@ function FoodChoice({ title, ingredients, setLoading }) {
   }
 
   return (
-    <div className="recipe-container">
-      <div className="test">
-        <img className="food-image" src={image} alt={title} />
-        <div className="infocard">
-          <h1 className="primary">{title}</h1>
-          <a onClick={handleClick} className="button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="white"
-                d="m229.66 109.66l-48 48a8 8 0 0 1-11.32-11.32L204.69 112H165a88 88 0 0 0-85.23 66a8 8 0 0 1-15.5-4A103.94 103.94 0 0 1 165 96h39.71l-34.37-34.34a8 8 0 0 1 11.32-11.32l48 48a8 8 0 0 1 0 11.32ZM192 208H40V88a8 8 0 0 0-16 0v120a16 16 0 0 0 16 16h152a8 8 0 0 0 0-16Z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
+    <div className="flex-column flex-center recipe-container fade-in delay2">
+      <h1 className="primary">{title}</h1>
+      <img className="food-image" src={image} alt={title} />
+      <button onClick={handleClick} className="button">
+        Choose this recipe
+      </button>
     </div>
   );
 }

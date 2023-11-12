@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className="listcontainer">
-      <h1 className="footer-h1">Sustainabite</h1>
+    <div>
+      <h1 className="footer-h1">SustainaBites</h1>
       <ul>
         <li>
           <h1 className="footer-h2">About</h1>
