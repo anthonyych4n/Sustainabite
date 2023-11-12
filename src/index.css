@@ -195,6 +195,91 @@ input:focus {
   box-shadow: 0px 9px 20px 1px rgba(0, 0, 0, 0.78);
 }
 
+.recipe-title {
+  font-size: 8rem;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+
+.recipe-desc {
+  color: white;
+  text-align: center;
+  padding-bottom: 5rem;
+  font-size: 4rem;
+}
+
+.header-section {
+  background-color: black;
+}
+
+.ingredients-section {
+  background-color: #A6CF98;
+  color: black;
+  padding-bottom: 5rem;
+}
+
+.recipe-dish {
+  color: #A6CF98;
+  text-align: center;
+  font-size: 6rem;
+  padding-bottom: 5rem;
+}
+
+.ingredients-header {
+  text-align: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.revised-ingredient {
+  font-size: 2rem;
+  padding-left: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.instructions-section {
+  background-color: #d9d9d0;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.instructions-header {
+  font-size: 4rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reason-section{
+  background-color: #A6CF98;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.reason-header{
+  text-align: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.reason-paragraph {
+  color: black;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.instruction-list {
+  text-align: center;
+  list-style-position: inside;
+}
+
 /* Search Results*/
 
 .search-results {
