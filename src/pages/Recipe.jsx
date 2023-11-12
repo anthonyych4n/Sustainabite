@@ -6,17 +6,17 @@ function Recipe() {
   const [recipe, setRecipe] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
+  const [why, setWhy] = useState("");
 
   useEffect(() => {
     if (recipe.length === 0 || !recipe) {
       const data = JSON.parse(localStorage.getItem("recipe"));
       const jsonString = data;
-      console.log(jsonString);
-
       const jsonObject = JSON.parse(jsonString);
       console.log(jsonObject);
       setIngredients(Object.entries(jsonObject.ingredients));
       setInstructions(jsonObject.instructions);
+      setWhy(jsonObject.reason);
     }
   }, []);
 
@@ -45,6 +45,8 @@ function Recipe() {
           </ol>
         </>
       )}
+      <h2>Why:</h2>
+      <p>{why}</p>
     </div>
   );
 }
