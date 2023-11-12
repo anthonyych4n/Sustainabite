@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-function FoodChoice({ title }) {
+function FoodChoice({ title, ingredients }) {
   const [image, setImage] = useState(null);
 
   async function getFoodImage(title) {
@@ -38,8 +38,31 @@ function FoodChoice({ title }) {
     fetchImage();
   }, [title]); // Include title as a dependency to re-run the effect when the title changes
 
-  function handleClick() {
+  async function handleClick() {
     console.log(title);
+    var requestData = {
+      dish_name: title,
+      dish_ingredients: ingredients,
+    };
+
+    // Make a POST request to your Flask endpoint
+    await fetch("http://127.0.0.1:5000/gpt/suggestion/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Display the response on the frontend
+        localStorage.setItem("recipe", JSON.stringify(data));
+        console.log(data);
+        window.location.href = "/search-results/recipe";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 
   return (

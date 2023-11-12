@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import MainPage from "./pages/MainPage";
 import SearchResult from "./pages/SearchResult";
+import Recipe from "./pages/Recipe";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -24,6 +25,7 @@ function App() {
             path="/search-results"
             element={<SearchResult results={results} setResults={setResults} />}
           />
+          <Route path="/search-results/recipe" element={<Recipe />} />
         </Routes>
       </Router>
     </>

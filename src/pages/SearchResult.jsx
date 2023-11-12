@@ -17,9 +17,23 @@ function SearchResult({ results, setResults }) {
       <h1>Results:</h1>
       <div className="food-choices">
         {Array.from(new Set(results.map((result) => result.title))).map(
-          (uniqueTitle, index) => (
-            <FoodChoice key={index} title={uniqueTitle} />
-          )
+          (uniqueTitle, index) => {
+            // Find the result object with the matching title
+            const matchingResult = results.find(
+              (result) => result.title === uniqueTitle
+            );
+
+            console.log(matchingResult.ingredients);
+
+            return (
+              <FoodChoice
+                key={index}
+                title={uniqueTitle}
+                ingredients={matchingResult.ingredients}
+                // Add more properties as needed
+              />
+            );
+          }
         )}
       </div>
     </div>
