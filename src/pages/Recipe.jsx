@@ -8,18 +8,19 @@ function Recipe() {
   const [reason, setReason] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
+  const [why, setWhy] = useState("");
 
   useEffect(() => {
     if (recipe.length === 0 || !recipe) {
       const data = JSON.parse(localStorage.getItem("recipe"));
       const jsonString = data;
-      console.log(jsonString);
       const jsonObject = JSON.parse(jsonString);
       console.log(jsonObject);
       setRecipe(jsonObject.dish_name);
       setReason(jsonObject.reason);
       setIngredients(Object.entries(jsonObject.ingredients));
       setInstructions(jsonObject.instructions);
+      setWhy(jsonObject.reason);
     }
   }, []);
 
