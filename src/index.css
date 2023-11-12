@@ -211,41 +211,63 @@ input:focus {
   box-shadow: 0px 9px 20px 1px rgba(0, 0, 0, 0.78);
 }
 
+.yes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 6rem;
+}
+
 .recipe-title {
   font-size: 8rem;
   color: white;
-  padding: 3rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
 .recipe-desc {
   color: white;
   text-align: center;
-  padding-bottom: 5rem;
   font-size: 4rem;
 }
 
 .header-section {
   background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ingredients-section {
-  background-color: #a6cf98;
+.headercontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.ingredientscontainer {
+  background-color: white;
+  border-radius: 3rem;
   color: black;
-  padding-bottom: 5rem;
+  width: 33%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  margin: 4rem;
 }
 
 .recipe-dish {
-  color: #a6cf98;
   text-align: center;
   font-size: 6rem;
-  padding-bottom: 5rem;
+  font-weight: bold;
+  color: #a6cf98;
 }
 
 .ingredients-header {
   text-align: center;
   font-size: 4rem;
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .revised-ingredient {
@@ -256,11 +278,12 @@ input:focus {
 }
 
 .instructions-section {
-  background-color: #d9d9d0;
+  background-color: #a6cf98;
   text-align: center;
   justify-content: center;
   font-size: 2rem;
-  padding: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .instructions-header {
@@ -269,18 +292,44 @@ input:focus {
   text-align: center;
 }
 
+li {
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+.wow {
+  padding: 0;
+}
+
+.instructionscontainer {
+  width: 33%;
+  background-color: white;
+  margin: 4rem;
+  border-radius: 3rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .reason-section {
   background-color: #a6cf98;
   text-align: center;
   justify-content: center;
-  font-size: 2rem;
-  padding: 2rem;
+  font-size: 4rem;
+  margin: 4rem;
+  background-color: white;
+  border-radius: 3rem;
+  width: 33%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .reason-header {
   text-align: center;
   font-size: 4rem;
   padding: 2rem;
+}
+
+.reason {
+  color: black;
+  font-size: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 .reason-paragraph {

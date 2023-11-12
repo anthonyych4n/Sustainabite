@@ -42,6 +42,7 @@ function FoodChoice({ title, ingredients, setLoading }) {
   async function handleClick() {
     setLoading(true);
     console.log(title);
+    console.log(ingredients);
     var requestData = {
       dish_name: title,
       dish_ingredients: ingredients,
