@@ -26,12 +26,15 @@ function SearchResult({ results, setResults }) {
             console.log(matchingResult.ingredients);
 
             return (
+              <>
               <FoodChoice
                 key={index}
                 title={uniqueTitle}
                 ingredients={matchingResult.ingredients}
                 // Add more properties as needed
               />
+              </>
+              
             );
           }
         )}
