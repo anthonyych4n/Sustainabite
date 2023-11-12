@@ -8,9 +8,9 @@ function MainPage({ setQuery, query }) {
       <section>
         <div className="mainpage1">
           <div className="titlecontainer">
-            <img src="src\assets\cart.png" />
-            <img src="src\assets\name.png" />
-            <p>A web app to find more sustainable choices to your food.</p>
+            <img className="fade-in" src="src\assets\cart.png" />
+            <img className="fade-in delay1" src="src\assets\name.png" />
+            <p className="fade-in delay2">A web app to find more sustainable choices to your food.</p>
           </div>
         </div>
 

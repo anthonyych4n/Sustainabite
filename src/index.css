@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,6 +35,10 @@
   padding: 0;
 }
 
+body {
+  background-color: var(--middle-main-color);
+}
+
 p {
   font-size: 1.6rem;
   color: var(--text-primary);
@@ -46,7 +50,7 @@ input:focus {
 
 /* Components */
 .search {
-  /* font-family: "DM Sans", sans-serif; */
+  font-family: "DM Sans", sans-serif;
   justify-self: center;
   border: none;
   padding: 1.9rem 3.2rem;
@@ -113,7 +117,6 @@ input:focus {
   padding-bottom: 4rem;
 }
 
-
 .Icon {
   position: relative;
   width: 900px;
@@ -121,7 +124,7 @@ input:focus {
   left: 35%;
   top: 20%;
 }
-.detailstitle{
+.detailstitle {
   position: absolute;
   justify-content: center;
   top: 1900px;
@@ -130,22 +133,22 @@ input:focus {
   color: var(--midlight-main-color);
 }
 
-.details{
+.details {
   position: absolute;
   justify-content: center;
   align-items: center;
   font-size: 50px;
   top: 1750px;
-  left: 48%
+  left: 48%;
 }
 
-.detailscontainer{
+.detailscontainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.detailscontainer > p{
+.detailscontainer > p {
   color: var(--midlight-main-color);
   position: absolute;
   justify-content: center;
@@ -157,7 +160,6 @@ input:focus {
 
 .mainpageh1 {
   font-size: 5rem;
-  
 }
 
 .image1 {
@@ -181,59 +183,75 @@ input:focus {
   top: 47%;
   left: 32%;
   gap: 1rem;
-  box-shadow: 0px 9px 20px 1px rgba(0,0,0,0.78);
+  box-shadow: 0px 9px 20px 1px rgba(0, 0, 0, 0.78);
 }
 
 /* Search Results*/
 
 .search-results {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #c6ed93;
+  height: 100vh;
   color: var(--text-secondary);
 }
 
 .food-choices {
   display: flex;
   flex-direction: row;
-  position: relative;
-  align-items: space-between;
-  justify-content: space-evenly;
-  max-width: 300px;
-  max-height: 300px;
-  min-width: 300px;
-  min-height: 300px;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
+  width: 70%;
 }
 
+.food-image {
+  height: 25rem;
+  width: 25rem;
+}
 
 .featurescontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative; /* changed from absolute to relative */
-  border-radius: 50px; 
+  border-radius: 50px;
   height: 100%;
   width: 100%;
   padding-top: 10rem;
 }
 
-.features-img{
+.results {
+  padding-bottom: 2rem;
+  font-size: 6rem;
+}
+
+.recipe-container {
+  background-color: #14452f;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 2rem;
+  gap: 2rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.features-img {
   max-height: 6rem;
   max-width: 6rem;
   margin-right: 2.5rem;
 }
-.features{
+.features {
   font-size: 5rem;
   padding: 2rem;
 }
 
-.feature-boxes{
+.feature-boxes {
   padding-top: 10rem;
 }
 
-.feature-subtitle > p{
+.feature-subtitle > p {
   font-size: 1.6rem;
 }
 .box {
@@ -283,39 +301,31 @@ input:focus {
 
 /* Basic Button Styles */
 .button {
+  font-family: "DM Sans", sans-serif;
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 20px 30px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 2px solid #3498db;
+  border: 2px solid var(--middle-main-color);
   border-radius: 5px;
-  color: #3498db;
+  color: black;
   background-color: #ffffff;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   max-width: 450px;
 }
 
+.primary {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
 .button:hover {
-  background-color: #3498db;
+  background-color: green;
   color: #ffffff;
   border-color: #ffffff;
-}
-
-/* Additional Styles for Different States */
-.button:active {
-  background-color: #1f618d;
-  border-color: #1f618d;
-}
-
-/* Disable the button */
-.button:disabled {
-  background-color: #bdc3c7;
-  border-color: #bdc3c7;
-  color: #7f8c8d;
-  cursor: not-allowed;
 }
 
 /* Util */
@@ -336,12 +346,19 @@ input:focus {
   justify-content: center;
 }
 
-.flex-column > img{
+.flex-column > img {
   display: flex;
   flex-direction: column;
-  max-width: 450px;
-  max-height: 450px;
-  min-width: 450px;
-  min-height: 450px;
   border-radius: 50%;
+}
+
+@media (max-width: 1068px) {
+  .flex-column > img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .results {
+    font-size: 2rem;
+  }
 }
