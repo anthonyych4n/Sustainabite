@@ -47,10 +47,6 @@ def get_gpt_suggestion():
         # Call ChatGPT API to get sustainable alternatives
         suggestions = call_chatgpt(dish_ingredients, dish_name)
 
-        # Return a response with original data and sustainable alternatives
-        # return jsonify({
-        #     'sustainable_alternatives': suggestions
-        # })
         return jsonify(suggestions)
     
     except Exception as e:
@@ -59,7 +55,7 @@ def get_gpt_suggestion():
 
 def call_chatgpt(ingredients, dish_name):
     try:
-        request = f"Given the ingredients '{ingredients} for dish '{dish_name}', suggest more eco-friendly and sustainable alternatives. Please reply only in JSON format, where we have an outer field of 'ingredients' containing JSON mappings of old ingredients to the new ingredient replacement. Please provide a field for intructions to cook the new dish as 'instructions' with the step by step listed as an array of strings in JSON format."
+        request = f"Given the ingredients '{ingredients} for dish '{dish_name}', suggest more eco-friendly and sustainable alternatives. Please reply only in JSON format, where we have an outer field of 'ingredients' containing JSON mappings of old ingredients to the new ingredient replacement. Please provide a field for intructions to cook the new dish as 'instructions' with the step by step listed as an array of strings in JSON format. Please ensure this can be directly converted into JSON format."
 
         headers = {
             "Content-Type": "application/json",
@@ -69,8 +65,8 @@ def call_chatgpt(ingredients, dish_name):
         info = {
             "prompt": request,
             "model": "text-davinci-003",
-            "max_tokens": 500,
-            "temperature": 0.8
+            "max_tokens": 800,
+            "temperature": 0.6
         }
 
         url = "https://api.openai.com/v1/completions"
