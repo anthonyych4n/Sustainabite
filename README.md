@@ -1,6 +1,6 @@
-# Sustainabites: Transforming Eating Habits for a Healthier and Sustainable Future
+# React + Vite
 
-Sustainabites is a project born out of the vision to reshape dietary choices, promoting a healthier lifestyle and contributing to a sustainable future. Recognizing the profound impact of our food decisions on personal well-being and the environment, our mission is to foster mindful, nutritious eating habits through an innovative platform.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 ## Key Features
 
