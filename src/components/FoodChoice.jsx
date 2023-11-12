@@ -5,20 +5,21 @@ function FoodChoice({ title, ingredients, setLoading }) {
   const [image, setImage] = useState(null);
 
   async function getFoodImage(title) {
-    const apiKey = "jSZDikyJlk4VfUZn1GRXMYJfX6BH6wlAq3vz06XgfRNAPBwCaEn0kunN"; // Replace with your actual API key
-    const apiUrl = `https://api.pexels.com/v1/search?query=${title}&per_page=1`;
+    const accessKey = "7gz-qGCLoErhkDg1L7O-WeFjJBfrOoEPFJ5B3CJStwg"; // Replace with your actual Unsplash Access Key
+    const apiUrl = `https://api.unsplash.com/photos/random?query=${title}&count=1`;
 
     try {
       const response = await fetch(apiUrl, {
         headers: {
-          Authorization: apiKey,
+          Authorization: `Client-ID ${accessKey}`,
         },
       });
 
       const data = await response.json();
 
-      if (data.photos && data.photos.length > 0) {
-        return data.photos[0].src.large;
+      if (data && data.length > 0) {
+        console.log(data);
+        return data[0].urls.full;
       } else {
         console.error("Unable to retrieve image.");
         return null;
@@ -36,7 +37,7 @@ function FoodChoice({ title, ingredients, setLoading }) {
     };
 
     fetchImage();
-  }, [title]); // Include title as a dependency to re-run the effect when the title changes
+  }, []); // Include title as a dependency to re-run the effect when the title changes
 
   async function handleClick() {
     setLoading(true);
@@ -69,7 +70,12 @@ function FoodChoice({ title, ingredients, setLoading }) {
   return (
     <div className="recipe-container">
       <div className="test">
-        <img className="food-image" src={image} alt={title} />
+        {image ? (
+          <img className="food-image" src={image} alt={title} loading="lazy" />
+        ) : (
+          <div className="placeholder fade-in-out">Loading...</div>
+        )}
+
         <div className="infocard">
           <h1 className="primary">{title}</h1>
           <a onClick={handleClick} className="button">

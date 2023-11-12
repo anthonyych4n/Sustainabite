@@ -151,6 +151,16 @@ input:focus {
   opacity: 0;
 }
 
+.placeholder {
+  background-color: #f2f2f2;
+  color: #ccc;
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .detailscontainer {
   display: flex;
   align-items: center;

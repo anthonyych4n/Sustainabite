@@ -29,7 +29,6 @@ function SearchResult({ results, setResults }) {
           </>
         ) : (
           <>
-            {" "}
             <div className="search-results">
               <h1 className="results fade-in">Results:</h1>
               <div className="food-choices">
