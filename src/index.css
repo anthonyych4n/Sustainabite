@@ -124,6 +124,15 @@ input:focus {
   left: 35%;
   top: 20%;
 }
+
+.listcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 4rem;
+}
+
 .detailstitle {
   position: absolute;
   justify-content: center;
@@ -193,7 +202,7 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #c6ed93;
+  background-color: white;
   height: 100vh;
   color: var(--text-secondary);
 }
@@ -204,13 +213,31 @@ input:focus {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   width: 70%;
 }
 
 .food-image {
   height: 25rem;
   width: 25rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  z-index: 2;
+}
+
+.infocard {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40%;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.55);
+  transition: all 0.5s ease;
+  z-index: 3;
+  pointer-events: none;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
 }
 
 .featurescontainer {
@@ -230,11 +257,8 @@ input:focus {
 }
 
 .recipe-container {
-  background-color: #14452f;
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 2rem;
   gap: 2rem;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .features-img {
@@ -292,40 +316,27 @@ input:focus {
 
 .footer-h1 {
   color: var(--text-primary);
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .footer-h2 {
   color: var(--text-primary);
+  font-size: 2rem;
 }
 
 /* Basic Button Styles */
 .button {
-  font-family: "DM Sans", sans-serif;
-  display: inline-block;
-  padding: 20px 30px;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: 2px solid var(--middle-main-color);
-  border-radius: 5px;
-  color: black;
-  background-color: #ffffff;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  max-width: 450px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  pointer-events: all;
+  z-index: -999;
 }
 
 .primary {
   font-size: 2rem;
   color: var(--text-primary);
-}
-
-.button:hover {
-  background-color: green;
-  color: #ffffff;
-  border-color: #ffffff;
+  width: 60%;
 }
 
 /* Util */
@@ -350,6 +361,22 @@ input:focus {
   display: flex;
   flex-direction: column;
   border-radius: 50%;
+}
+
+.fade-in-out {
+  animation: fadeInOut 3s ease-in-out infinite; /* Adjust duration and timing function as needed */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 1068px) {

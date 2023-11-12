@@ -22,7 +22,7 @@ function SearchResult({ results, setResults }) {
         {loading ? (
           <>
             <div className="search-results">
-              <h1 className="results">
+              <h1 className="results fade-in-out">
                 Loading... Please wait while we curate a recipe for you.
               </h1>
             </div>
