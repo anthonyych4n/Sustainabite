@@ -1,6 +1,6 @@
 ## 🌳SUSTAINABITE🌳
 
-## Key Features
+## ⭐Key Features⭐
 
 - **Curated Selection:** Sustainabites carefully curates a diverse range of delicious and nutritious meals. Our focus is on choices that not only promote individual health but also align with environmentally sustainable practices.
 
@@ -8,7 +8,7 @@
 
 - **Empowering Choices:** Users can input the name of a meal or dish, gaining access to a rich array of options for selection. Upon making a choice, users receive a detailed list featuring individual ingredients, sustainable alternatives, and a comprehensive recipe. Additionally, valuable information is presented to enlighten users about the health and sustainability benefits of specific ingredients, empowering them to make informed choices.
 
-## How to Run
+## 🏃🏿How to Run🏃🏿
 
 To experience Sustainabites, follow these steps:
 
@@ -22,7 +22,7 @@ To experience Sustainabites, follow these steps:
 3. **Run the React App:**
    - Execute 'npm run dev' to run the React app.
 
-## Future Deployment
+## 🔮Future Deployment🔮
 
 In the future, we plan to streamline the deployment process to enhance accessibility. Potential strategies include deploying and hosting the application using platforms like Netlify. Additionally, we aim to leverage AWS services such as S3, Terraform, Lambda, and Boto3 to address the challenges associated with running the current app locally.
 
