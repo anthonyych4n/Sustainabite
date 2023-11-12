@@ -13,7 +13,7 @@ function SearchResult({ results, setResults }) {
   }, []);
 
   return (
-    <div className="search-results flex-center flex-column">
+    <div className="search-results flex-column flex-center">
       <h1>Results:</h1>
       <div className="food-choices">
         {Array.from(new Set(results.map((result) => result.title))).map(
