@@ -23,7 +23,7 @@ function MainPage({ setQuery, query }) {
         <div className="mainpage3">
           <div className= "detailscontainer">
             <h2 className="details">Details</h2>
-            <h className="detailstitle">How Sustainabite works</h>
+            <h1 className="detailstitle">How Sustainabite works</h1>
             <p>
             Sustainabite is a website dedicated to helping individuals make sustainable choices when it comes to their meals. By entering the details of your meal, we analyze its carbon footprint and provide you with information on how it impacts the environment. With Sustainabite, you can make informed decisions and contribute to a greener future.
             </p>
