@@ -42,7 +42,6 @@ def get_gpt_suggestion():
         # Get parameters from the request body
         data = request.get_json()
         dish_name = data.get('dish_name')
-        dish_instructions = data.get('dish_instructions')
         dish_ingredients = data.get('dish_ingredients')
 
         # Call ChatGPT API to get sustainable alternatives
