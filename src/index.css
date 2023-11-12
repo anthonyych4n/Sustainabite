@@ -187,8 +187,26 @@ input:focus {
 /* Search Results*/
 
 .search-results {
-  background-color: var(--midlight-main-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #c6ed93;
+  color: var(--text-secondary);
 }
+
+.food-choices {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: space-between;
+  justify-content: space-evenly;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  flex-wrap: wrap;
+}
+
 
 .featurescontainer {
   display: flex;
@@ -277,6 +295,7 @@ input:focus {
   color: #3498db;
   background-color: #ffffff;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  max-width: 450px;
 }
 
 .button:hover {
@@ -315,4 +334,14 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex-column > img{
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  max-height: 450px;
+  min-width: 450px;
+  min-height: 450px;
+  border-radius: 50%;
 }
