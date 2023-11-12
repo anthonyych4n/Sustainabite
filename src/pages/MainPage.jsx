@@ -1,43 +1,33 @@
 /* eslint-disable react/prop-types */
 import Search from "../components/Search";
 import Footer from "../components/Footer";
+import Page from "../components/Page";
+
+import { useInView } from "react-intersection-observer";
 
 function MainPage({ setQuery, query }) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <>
       <section>
         <div className="mainpage1">
           <div className="titlecontainer">
-            <img className="fade-in" src="src\assets\cart.png" />
-            <img className="fade-in delay1" src="src\assets\name.png" />
-            <p className="fade-in delay2">A web app to find more sustainable choices to your food.</p>
+            <img className="fade-up" src="src\assets\cart.png" />
+            <img className="fade-up" src="src\assets\name.png" />
+            <p className="fade-in para">
+              A web app to find more sustainable choices to your food.
+            </p>
           </div>
         </div>
 
-        <div className="searchcontainer">
+        <div className={`searchcontainer `}>
           <Search setQuery={setQuery} query={query} />
         </div>
         <div className="mainpage2"></div>
-        <div className="mainpage3">
-          <div className="detailscontainer">
-            <h2 className="details">Details</h2>
-            <h1 className="detailstitle">How Sustainabite works</h1>
-            <p>
-              Sustainabite is a website dedicated to helping individuals make
-              sustainable choices when it comes to their meals. By entering the
-              details of your meal, we analyze its carbon footprint and provide
-              you with information on how it impacts the environment. With
-              Sustainabite, you can make informed decisions and contribute to a
-              greener future.
-            </p>
-          </div>
-          <img
-            className="Icon"
-            src="src\assets\icon1.png"
-            style={{ alignSelf: "center" }}
-          ></img>
-        </div>
-
+        <Page />
         <div className="mainpage4">
           <div className="featurescontainer">
             <h2 className="features">Features</h2>
@@ -46,7 +36,7 @@ function MainPage({ setQuery, query }) {
               your meals.
             </h3>
             <div className="flex-row feature-boxes">
-              <div className="box">
+              <div className={`box ${inView ? "fade-up" : ""} `} ref={ref}>
                 <img className="features-img" src="src\assets\bag.png" />
                 <div>
                   <h5 className="box-title">Personalized Recommendations</h5>
@@ -58,7 +48,7 @@ function MainPage({ setQuery, query }) {
                   </p>
                 </div>
               </div>
-              <div className="box">
+              <div className={`box ${inView ? "fade-up" : ""} `}>
                 <img className="features-img" src="src\assets\bag.png" />
                 <div>
                   <h5 className="box-title">Meal Analysis</h5>
@@ -68,7 +58,7 @@ function MainPage({ setQuery, query }) {
                   </p>
                 </div>
               </div>
-              <div className="box">
+              <div className={`box ${inView ? "fade-up" : ""} `}>
                 <img className="features-img" src="src\assets\bag.png" />
                 <div>
                   <h5 className="box-title">
