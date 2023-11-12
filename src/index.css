@@ -70,8 +70,8 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: grey;
+  height: 80vh;
+  background-color: #d9d9d9;
 }
 
 .mainpage3 {
@@ -147,6 +147,61 @@ input:focus {
   background-color: var(--midlight-main-color);
 }
 
+.featurescontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* changed from absolute to relative */
+  border-radius: 50px; 
+  height: 100%;
+  width: 100%;
+  padding-top: 10rem;
+}
+
+.features-img{
+  max-height: 6rem;
+  max-width: 6rem;
+  margin-right: 2.5rem;
+}
+.features{
+  font-size: 5rem;
+  padding: 2rem;
+}
+
+.feature-boxes{
+  padding-top: 10rem;
+}
+
+.feature-subtitle > p{
+  font-size: 1.6rem;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center; /* added to center the boxes */
+  order: 0;
+  background-color: #ffffff;
+  padding: 3rem;
+  width: 50%;
+  height: 100%;
+  margin: 2rem;
+  background-color: white;
+  border-radius: 50px;
+  /* add other styles as needed */
+}
+
+.box-content {
+  color: black;
+  font-size: 1.6rem;
+}
+
+.box-title {
+  font-size: 2rem;
+}
+
 /* Footer */
 .footer {
   background-color: #000000;
@@ -205,6 +260,7 @@ input:focus {
 .flex-row {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .flex-column {
